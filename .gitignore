@@ -1,2 +1,1 @@
-### Ignore Jupyter Lab checkpoints in all subdirectories
-/.ipynb_checkpoints/
+.ipynb_checkpoints/
