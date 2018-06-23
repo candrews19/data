@@ -1,0 +1,10 @@
+Things to do:
+
+First set up .gitignore for Jupyter checkpoints
+
+Practice working with pd.DataFrame -> bring in a multi column dataframe and practice melting measurements
+	"unmelt" a tall dataframe into a short one
+	manipulate values within the dataframe -> perform division operations, etc
+	plotting - from tall vs wide dataframe
+
+new line here...
