@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: bootcamp-utils
+Version: 0.0.1
+Summary: Utilities for use in bootcamp.
+Home-page: UNKNOWN
+Author: Justin Bois
+Author-email: bois@caltech.edu
+License: UNKNOWN
+Description: # bootcamp_utils
+        
+        Utilities for use in the Introduction to Programming in the Biological Sciences Bootcamp.
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: ext/markdown
