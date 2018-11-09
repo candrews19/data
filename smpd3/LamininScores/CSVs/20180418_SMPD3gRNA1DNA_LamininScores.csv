@@ -1,0 +1,10 @@
+﻿Date,Experiment,Image,Target,Treatment,Dose,Embryo,Somites,Section,Control Side,Experimental Side
+20180418,2018.04.18_SMPD3_CRISPR_EMT_Markers,20180418_SMPD3gRNA1DNA_Pax7NCadLaminin_Emb5_9ss_20x_sec7.tif,SMPD3,gRNA1,2 µg/µl,5,9,7,Incomplete channel,No channel
+20180418,2018.04.18_SMPD3_CRISPR_EMT_Markers,20180418_SMPD3gRNA1DNA_Pax7NCadLaminin_Emb5_9ss_20x_sec8.tif,SMPD3,gRNA1,2 µg/µl,5,9,8,Complete channel,No channel
+20180418,2018.04.18_SMPD3_CRISPR_EMT_Markers,20180418_SMPD3gRNA1DNA_Pax7NCadLaminin_Emb5_9ss_20x_sec9.tif,SMPD3,gRNA1,2 µg/µl,5,9,9,Complete channel,Incomplete channel
+20180418,2018.04.18_SMPD3_CRISPR_EMT_Markers,20180418_SMPD3gRNA1DNA_Pax7NCadLaminin_Emb6_8ss_20x_sec3.tif,SMPD3,gRNA1,2 µg/µl,6,8,3,Complete channel,Complete channel
+20180418,2018.04.18_SMPD3_CRISPR_EMT_Markers,20180418_SMPD3gRNA1DNA_Pax7NCadLaminin_Emb6_8ss_20x_sec4.tif,SMPD3,gRNA1,2 µg/µl,6,8,4,Complete channel,No channel
+20180418,2018.04.18_SMPD3_CRISPR_EMT_Markers,20180418_SMPD3gRNA1DNA_Pax7NCadLaminin_Emb6_8ss_20x_sec5.tif,SMPD3,gRNA1,2 µg/µl,6,8,5,Complete channel,Incomplete channel
+20180418,2018.04.18_SMPD3_CRISPR_EMT_Markers,20180418_SMPD3gRNA1DNA_Pax7NCadLaminin_Emb7_8ss_20x_sec2.tif,SMPD3,gRNA1,2 µg/µl,7,8,2,Incomplete channel,No channel
+20180418,2018.04.18_SMPD3_CRISPR_EMT_Markers,20180418_SMPD3gRNA1DNA_Pax7NCadLaminin_Emb7_8ss_20x_sec3.tif,SMPD3,gRNA1,2 µg/µl,7,8,3,Incomplete channel,No channel
+20180418,2018.04.18_SMPD3_CRISPR_EMT_Markers,20180418_SMPD3gRNA1DNA_Pax7NCadLaminin_Emb7_8ss_20x_sec4.tif,SMPD3,gRNA1,2 µg/µl,7,8,4,Incomplete channel,No channel
