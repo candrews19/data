@@ -1,0 +1,16 @@
+﻿Date,Experiment,Image,Target,Treatment,Dose,Embryo,Somites,Section,Control Side,Experimental Side
+20181102,20181102_SMPD3gRNAElectro,20181102_SMPD3gRNA1RNP_Pax7Laminin_Emb2_8ss_40x_sec1.czi,SMPD3,gRNA1+Cas9Protein,0.35 µg/µl,2,8,1,Incomplete channel,Complete channel
+20181102,20181102_SMPD3gRNAElectro,20181102_SMPD3gRNA1RNP_Pax7Laminin_Emb2_8ss_40x_sec2.czi,SMPD3,gRNA1+Cas9Protein,0.35 µg/µl,2,8,2,Complete channel,Complete channel
+20181102,20181102_SMPD3gRNAElectro,20181102_SMPD3gRNA1RNP_Pax7Laminin_Emb2_8ss_40x_sec3.czi,SMPD3,gRNA1+Cas9Protein,0.35 µg/µl,2,8,3,Complete channel,No channel
+20181102,20181102_SMPD3gRNAElectro,20181102_SMPD3gRNA1RNP_Pax7Laminin_Emb3_7ss_40x_sec1.czi,SMPD3,gRNA1+Cas9Protein,0.35 µg/µl,3,7,1,Complete channel,Incomplete channel
+20181102,20181102_SMPD3gRNAElectro,20181102_SMPD3gRNA1RNP_Pax7Laminin_Emb3_7ss_40x_sec2.czi,SMPD3,gRNA1+Cas9Protein,0.35 µg/µl,3,7,2,Incomplete channel,Incomplete channel
+20181102,20181102_SMPD3gRNAElectro,20181102_SMPD3gRNA1RNP_Pax7Laminin_Emb3_7ss_40x_sec3.czi,SMPD3,gRNA1+Cas9Protein,0.35 µg/µl,3,7,3,Complete channel,Incomplete channel
+20181102,20181102_SMPD3gRNAElectro,20181102_SMPD3gRNA1RNP_Pax7Laminin_Emb4_8ss_40x_sec1.czi,SMPD3,gRNA1+Cas9Protein,0.35 µg/µl,4,8,1,Complete channel,Complete channel
+20181102,20181102_SMPD3gRNAElectro,20181102_SMPD3gRNA1RNP_Pax7Laminin_Emb4_8ss_40x_sec2.czi,SMPD3,gRNA1+Cas9Protein,0.35 µg/µl,4,8,2,Complete channel,Incomplete channel
+20181102,20181102_SMPD3gRNAElectro,20181102_SMPD3gRNA1RNP_Pax7Laminin_Emb4_8ss_40x_sec3.czi,SMPD3,gRNA1+Cas9Protein,0.35 µg/µl,4,8,3,Complete channel,Incomplete channel
+20181102,20181102_SMPD3gRNAElectro,20181102_SMPD3gRNA1RNP_Pax7Laminin_Emb6_7ss_40x_sec2.czi,SMPD3,gRNA1+Cas9Protein,0.35 µg/µl,6,7,2,Incomplete channel,No channel
+20181102,20181102_SMPD3gRNAElectro,20181102_SMPD3gRNA1RNP_Pax7Laminin_Emb6_7ss_40x_sec3.czi,SMPD3,gRNA1+Cas9Protein,0.35 µg/µl,6,7,3,Complete channel,No channel
+20181102,20181102_SMPD3gRNAElectro,20181102_SMPD3gRNA1RNP_Pax7Laminin_Emb6_7ss_40x_sec4.czi,SMPD3,gRNA1+Cas9Protein,0.35 µg/µl,6,7,4,Complete channel,No channel
+20181102,20181102_SMPD3gRNAElectro,20181102_SMPD3gRNA1RNP_Pax7Laminin_Emb7_7ss_40x_sec1.czi,SMPD3,gRNA1+Cas9Protein,0.35 µg/µl,7,7,1,Incomplete channel,No channel
+20181102,20181102_SMPD3gRNAElectro,20181102_SMPD3gRNA1RNP_Pax7Laminin_Emb7_7ss_40x_sec2.czi,SMPD3,gRNA1+Cas9Protein,0.35 µg/µl,7,7,2,Complete channel,No channel
+20181102,20181102_SMPD3gRNAElectro,20181102_SMPD3gRNA1RNP_Pax7Laminin_Emb7_7ss_40x_sec4.czi,SMPD3,gRNA1+Cas9Protein,0.35 µg/µl,7,7,4,Incomplete channel,No channel
