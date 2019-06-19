@@ -1,0 +1,6 @@
+ ,Label,Area,Mean,IntDen,RawIntDen
+1,Background2a:background,23.446,14.670,343.956,6675
+2,Background2b:background,25.043,14.712,368.432,7150
+3,Background2c:background,19.787,14.391,284.749,5526
+4,CntlSide2:Cntl,5026.552,172.530,867229.392,16829926
+5,ExptSide2:Expt,4655.697,150.592,701110.794,13606138
