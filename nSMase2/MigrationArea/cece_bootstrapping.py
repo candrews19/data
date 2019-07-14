@@ -1,8 +1,39 @@
+# Not sure what this package is, copied this import from DABEST
 from __future__ import division
 
-def bootstrap(x1, x2=None, paired=False, statfunction=None, smoothboot=False,
+# This code is largely based onbootstrap tools in DABEST.
+
+def bootstrap(x1, x2, paired=True, statfunction=None,
 	alpha_level=0.05, reps=5000):
+    '''
+    Computes summary statistics and booststrapped confidence interval for
+    paired data.
+
+    Keywords:
+    x1, x2: Paired 1D arrays
+
+    paired: boolean, default True
+        Whether x1 and x2 are paired samples
+
+    statfunction: function
+        Summary statistic to call on data. Default is np.mean
+
+    alpha_level: float, default 0.05
+        alpha = 0.05 gives 95 percent confidence interval
+
+    reps: int, default = 5000
+        number of bootstrap replicates
+
+    Returns:
+
+
+
+
+
+
+    '''
 	
+    # Imports
     import numpy as np
     import pandas as pd
     import seaborn as sns
@@ -93,6 +124,8 @@ def bootstrap(x1, x2=None, paired=False, statfunction=None, smoothboot=False,
 
 
     #summary = summ_stat
+    # Calculates more statistics than it returns.
+    # Function can be modified to return necessary statistics.
     is_paired = paired
     is_difference = diff
     statistic = str(statfunction)
