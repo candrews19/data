@@ -1,0 +1,6 @@
+ ,Label,Area,Mean,Min,Max,IntDen,RawIntDen
+1,Ceramide:background,8.348,23.642,13,39,197.356,3830
+2,Ceramide:background,2.834,24.345,13,38,68.997,1339
+3,Ceramide:background,21.024,24.429,11,46,513.590,9967
+4,Ceramide:Cntl,2265.369,71.148,11,1970,161177.456,3127898
+5,Ceramide:Expt,3774.139,65.359,11,568,246675.506,4787120
