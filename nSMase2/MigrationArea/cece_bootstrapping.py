@@ -124,6 +124,8 @@ def bootstrap(x1, x2, paired=True, statfunction=None, smoothboot=False,
             warnings.warn("Some values used top 10 low/high samples;"
             " results may be unstable.")
 
+    effsize = np.mean(x2-x1)
+
 
     #summary = summ_stat
     # Calculates more statistics than it returns.
@@ -145,11 +147,12 @@ def bootstrap(x1, x2, paired=True, statfunction=None, smoothboot=False,
     pvalue_2samp_paired_ttest = ttest_2_paired
     pvalue_wilcoxon = wilcoxonresult
     pvalue_mann_whitney = mannwhitneyresult
+    effect_size = effsize
 
     stat_dict = {'ci' : ci, 'pct_ci_low' : pct_ci_low, 'pct_ci_high' : pct_ci_high, 'pct_low_high_indices' : pct_low_high_indices, 
     'bca_ci_low' : bca_ci_low, 'bca_ci_high' : bca_ci_high, 'bca_low_high_indices' : bca_low_high, 'pvalue_1samp_ttest' : pvalue_1samp_ttest, 
     'pvalue_2samp_ind_ttest' : pvalue_2samp_ind_ttest, 'pvalue_2samp_paired_ttest' : pvalue_2samp_paired_ttest, 
-    'pvalue_wilcoxon' : pvalue_wilcoxon, 'pvalue_mann_whitney' : pvalue_mann_whitney}
+    'pvalue_wilcoxon' : pvalue_wilcoxon, 'pvalue_mann_whitney' : pvalue_mann_whitney, 'effect_size' : effsize}
 
     return stat_dict
 
@@ -278,7 +281,7 @@ def add_more_stats(stats_df, data_df):
                 'bca_ci_low', 'bca_ci_high', 'bca_low_high_indices', 
                  'pvalue_1samp_ttest', 'pvalue_2samp_ind_ttest', 
                 'pvalue_2samp_paired_ttest', 'pvalue_wilcoxon',
-                'pvalue_mann_whitney']
+                'pvalue_mann_whitney', 'effect_size']
     
     # Get user input and check it looks ok
     
