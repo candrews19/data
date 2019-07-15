@@ -3,7 +3,7 @@ from __future__ import division
 
 # This code is largely based onbootstrap tools in DABEST.
 
-def bootstrap(x1, x2, paired=True, statfunction=None,
+def bootstrap(x1, x2, paired=True, statfunction=None, smoothboot=False,
 	alpha_level=0.05, reps=5000):
     '''
     Computes summary statistics and booststrapped confidence interval for
@@ -144,7 +144,12 @@ def bootstrap(x1, x2, paired=True, statfunction=None,
     pvalue_wilcoxon = wilcoxonresult
     pvalue_mann_whitney = mannwhitneyresult
 
-    return ci, bca_ci_low, bca_ci_high, pvalue_2samp_paired_ttest
+    stat_dict = {'ci' : ci, 'pct_ci_low' : pct_ci_low, 'pct_ci_high' : pct_ci_high, 'pct_low_high_indices' : pct_low_high_indices, 
+    'bca_ci_low' : bca_ci_low, 'bca_ci_high' : bca_ci_high, 'bca_low_high_indices' : bca_low_high, 'pvalue_1samp_ttest' : pvalue_1samp_ttest, 
+    'pvalue_2samp_ind_ttest' : pvalue_2samp_ind_ttest, 'pvalue_2samp_paired_ttest' : pvalue_2samp_paired_ttest, 
+    'pvalue_wilcoxon' : pvalue_wilcoxon, 'pvalue_mann_whitney' : pvalue_mann_whitney}
+
+    return stat_dict
 
 
 
@@ -204,6 +209,68 @@ def bca(data, alphas, statarray, statfunction, ostat, reps):
 
     return nvals
 
+def add_more_stats(stats_df, data_df):
+    # Check dataframe has "Treatment" column
+    assert('Treatment' in stats_df.columns), 'Given dataframe doesn\'t have a \'Treatment\' column.'
+    
+    # Get list of unique treatments
+    treatment_list = stats_df['Treatment']
+    
+    # List of possible stats the function can return
+    stats_options = ['ci', 'pct_ci_low', 'pct_ci_high', 'pct_low_high_indices',
+                'bca_ci_low', 'bca_ci_high', 'bca_low_high_indices', 
+                 'pvalue_1samp_ttest', 'pvalue_2samp_ind_ttest', 
+                'pvalue_2samp_paired_ttest', 'pvalue_wilcoxon',
+                'pvalue_mann_whitney']
+    
+    # Get user input and check it looks ok
+    
+    # Show user list of possible stats
+    print('Here are the possible statistics to add:')
+    for stat in stats_options:
+        print(stat)
+    print('Check docstring for stat meanings.')
+    print('\n')
+    
+    # Get list of stats the user wants to add to dataframe
+    stats_to_add = input('What stats do you want? Separate with commas: ')
+    stat_list = stats_to_add.split(', ')
+    
+    # Check statistics are in list of possible statistics
+    for requested in stat_list:
+        assert(requested in stats_options), 'Error! Given statistic not an option. Please check list of possible stats and try again.'
+        print(requested)
+    
+    # Check with user that we are getting the correct statistics
+    print('Are these the correct stats?')
+    correct = input('Type \'y\' if correct or \'n\' if incorrect: ')
+    assert(correct == 'y'), 'Incorrect stats selected. Please rerun the function and try again.'
+    print('Adding stats to statistics dataframe')
+    
+    new_stats_dict = {}
+    
+    for statistic in stat_list:
+        new_stats_dict[statistic] = []
+    
+    for treatment in treatment_list:
+        # Extract data for each treatment
+        df_treat = data_df.loc[data_df['Treatment'] == treatment]
+        df_treat = df_treat.reset_index()
+        
+        x1 = df_treat['Norm Control Area']
+        x2 = df_treat['Norm Experiment Area']
+        
+        stats_dict = bootstrap(x1, x2=x2, paired=True)
+        
+        for stat in stats_dict:
+            if stat in stat_list:
+                s = stats_dict[stat]
+                new_stats_dict[stat].append(s)
+    
+    for key in new_stats_dict:
+        stats_df[key] = new_stats_dict[key]
+    
+    return stats_df  
 
 
 
