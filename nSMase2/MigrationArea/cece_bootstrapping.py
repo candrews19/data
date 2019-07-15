@@ -26,6 +26,8 @@ def bootstrap(x1, x2, paired=True, statfunction=None, smoothboot=False,
 
     Returns:
 
+    dictionary of statistics
+
 
 
 
@@ -210,6 +212,61 @@ def bca(data, alphas, statarray, statfunction, ostat, reps):
     return nvals
 
 def add_more_stats(stats_df, data_df):
+    """
+    Stat definitions:
+
+        ci: float
+            The size of the confidence interval reported (in percentage).
+
+        pct_ci_low, pct_ci_high: floats
+            The upper and lower bounds of the confidence interval as computed
+            by taking the percentage bounds.
+
+        pct_low_high_indices: array
+            An array with the indices in `stat_array` corresponding to the
+            percentage confidence interval bounds.
+
+        bca_ci_low, bca_ci_high: floats
+            The upper and lower bounds of the bias-corrected and accelerated
+            (BCa) confidence interval. See Efron 1977.
+
+        bca_low_high_indices: array
+            An array with the indices in `stat_array` corresponding to the BCa
+            confidence interval bounds.
+
+        pvalue_1samp_ttest: float
+            P-value obtained from scipy.stats.ttest_1samp. If 2 arrays were
+            passed (x1 and x2), returns 'NIL'.
+            See https://docs.scipy.org/doc/scipy-1.0.0/reference/generated/scipy.stats.ttest_1samp.html
+
+        pvalue_2samp_ind_ttest: float
+            P-value obtained from scipy.stats.ttest_ind.
+            If a single array was given (x1 only), or if `paired` is True,
+            returns 'NIL'.
+            See https://docs.scipy.org/doc/scipy-1.0.0/reference/generated/scipy.stats.ttest_ind.html
+
+        pvalue_2samp_related_ttest: float
+            P-value obtained from scipy.stats.ttest_rel.
+            If a single array was given (x1 only), or if `paired` is False,
+            returns 'NIL'.
+            See https://docs.scipy.org/doc/scipy-1.0.0/reference/generated/scipy.stats.ttest_rel.html
+
+        pvalue_wilcoxon: float
+            P-value obtained from scipy.stats.wilcoxon.
+            If a single array was given (x1 only), or if `paired` is False,
+            returns 'NIL'.
+            The Wilcoxons signed-rank test is a nonparametric paired test of
+            the null hypothesis that the related samples x1 and x2 are from
+            the same distribution.
+            See https://docs.scipy.org/doc/scipy-1.0.0/reference/scipy.stats.wilcoxon.html
+
+        pvalue_mann_whitney: float
+            Two-sided p-value obtained from scipy.stats.mannwhitneyu.
+            If a single array was given (x1 only), returns 'NIL'.
+            The Mann-Whitney U-test is a nonparametric unpaired test of the null
+            hypothesis that x1 and x2 are from the same distribution.
+            See https://docs.scipy.org/doc/scipy-1.0.0/reference/generated/scipy.stats.mannwhitneyu.html
+    """
     # Check dataframe has "Treatment" column
     assert('Treatment' in stats_df.columns), 'Given dataframe doesn\'t have a \'Treatment\' column.'
     
