@@ -1,4 +1,6 @@
 .ipynb_checkpoints/
 *.DS_Store
 .gitattributes
+nSMase2/MigrationArea/__pycache__/*
+.gitignore
 
