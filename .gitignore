@@ -3,4 +3,4 @@
 .gitattributes
 nSMase2/MigrationArea/__pycache__/*
 .gitignore
-
+*.pyc
